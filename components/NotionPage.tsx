@@ -97,13 +97,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   const title = getBlockTitle(block, recordMap) || site.name
 
-  console.log('notion page', {
-    isDev: config.isDev,
-    title,
-    pageId,
-    rootNotionPageId: site.rootNotionPageId,
-    recordMap
-  })
 
   if (!config.isServer) {
     // add important objects to the window global for easy debugging
@@ -137,7 +130,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   let pageAside: React.ReactChild = null
 
   // only display comments and page actions on blog post pages
-  if (isBlogPost) {
+  if (pageId !== site.rootNotionPageId) {
     if (config.utterancesGitHubRepo) {
       comments = (
         <ReactUtterances

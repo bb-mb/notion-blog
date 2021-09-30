@@ -28,7 +28,7 @@ export const Footer: React.FC<{
     <footer className={styles.footer}>
       <div className={styles.copyright}>Copyright 2021 {config.author}</div>
 
-      {hasMounted ? (
+      {/* {hasMounted ? (
         <div className={styles.settings}>
           <a
             className={styles.toggleDarkMode}
@@ -38,7 +38,7 @@ export const Footer: React.FC<{
             {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
           </a>
         </div>
-      ) : null}
+      ) : null} */}
 
       <div className={styles.social}>
         {config.twitter && (
