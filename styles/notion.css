@@ -180,7 +180,15 @@
 
 @media only screen and (max-width: 1200px) {
   .notion-page-cover {
-    border-radius: 0;
+    border-radius: 12px;
+    padding: 16px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .notion-page-cover {
+    border-radius: 18px;
+    padding: 8px;
   }
 }
 
