@@ -97,7 +97,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   const title = getBlockTitle(block, recordMap) || site.name
 
-
   if (!config.isServer) {
     // add important objects to the window global for easy debugging
     const g = window as any
@@ -267,7 +266,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
           />
         }
       />
-
     </TwitterContextProvider>
   )
 }

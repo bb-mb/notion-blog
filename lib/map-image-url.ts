@@ -38,7 +38,6 @@ export const mapNotionImageUrl = (url: string, block: Block) => {
     url = notionImageUrlV2.toString()
   }
 
-
   return mapImageUrl(url)
 }
 

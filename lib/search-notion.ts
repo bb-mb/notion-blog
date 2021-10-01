@@ -18,8 +18,6 @@ async function searchNotionImpl(
     }
   })
     .then((res) => {
-
-
       if (res.ok) {
         return res
       }

@@ -11,7 +11,6 @@ export async function getSiteMaps(): Promise<types.SiteMap[]> {
     sites,
     async (site, index) => {
       try {
-
         return {
           site,
           ...(await getAllPages(site.rootNotionPageId, site.rootNotionSpaceId))

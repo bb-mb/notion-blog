@@ -50,7 +50,6 @@ export async function getStaticPaths() {
     fallback: true
   }
 
-
   return ret
 }
 

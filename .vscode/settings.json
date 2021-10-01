@@ -33,5 +33,8 @@
     "**/.now/": true,
     "**/.vercel/": true,
     "**/.google.json": true
-  }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
 }

@@ -37,7 +37,6 @@ export async function getPreviewImages(
         id: model.id
       }
 
-
       // TODO: should we fire and forget here to speed up builds?
       return got
         .post(api.createPreviewImage, { json })

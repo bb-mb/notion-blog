@@ -1,9 +1,5 @@
 import { ExtendedRecordMap } from 'notion-types'
-import {
-  parsePageId,
-  uuidToId,
-  getBlockTitle
-} from 'notion-utils'
+import { parsePageId, uuidToId, getBlockTitle } from 'notion-utils'
 
 import { inversePageUrlOverrides } from './config'
 
@@ -26,7 +22,6 @@ export function getCanonicalPageId(
     })
   }
 }
-
 
 /**
  * Gets the canonical, display-friendly version of a page's ID for use in URLs.

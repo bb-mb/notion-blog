@@ -23,7 +23,8 @@
     "test": "run-s test:*",
     "test:lint": "eslint .",
     "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check",
-    "posttest": "run-s build"
+    "posttest": "run-s build",
+    "format": "npx prettier --write ./*"
   },
   "dependencies": {
     "@google-cloud/firestore": "^4.10.1",

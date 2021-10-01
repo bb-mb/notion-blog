@@ -17,9 +17,7 @@ export default async (
       .send({ error: 'missing required parameter "tweetId"' })
   }
 
-
   const tweetAst = await fetchTweetAst(tweetId)
-
 
   res.status(200).json(tweetAst)
 }
