@@ -83,7 +83,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const searchParams = new URLSearchParams(params)
 
   // const darkMode = useDarkMode(true, { classNameDark: 'dark-mode' })
-  const darkMode = {value : true};
+  const darkMode = {value : false};
 
   if (router.isFallback) {
     return <Loading />
