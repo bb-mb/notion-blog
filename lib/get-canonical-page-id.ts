@@ -1,7 +1,8 @@
 import { ExtendedRecordMap } from 'notion-types'
 import {
   parsePageId,
-  getCanonicalPageId as getCanonicalPageIdImpl
+  uuidToId,
+  getBlockTitle
 } from 'notion-utils'
 
 import { inversePageUrlOverrides } from './config'
@@ -24,4 +25,45 @@ export function getCanonicalPageId(
       uuid
     })
   }
+}
+
+
+/**
+ * Gets the canonical, display-friendly version of a page's ID for use in URLs.
+ */
+// url path 에 한글 추가하기 위해 notion-utils 의 함수 대체
+export const getCanonicalPageIdImpl = (
+  pageId: string,
+  recordMap: ExtendedRecordMap,
+  { uuid = true }: { uuid?: boolean } = {}
+): string | null => {
+  if (!pageId || !recordMap) return null
+
+  const id = uuidToId(pageId)
+  const block = recordMap.block[pageId]?.value
+
+  if (block) {
+    const title = normalizeTitle(getBlockTitle(block, recordMap))
+
+    if (title) {
+      if (uuid) {
+        return `${title}-${id}`
+      } else {
+        return title
+      }
+    }
+  }
+
+  return id
+}
+
+export const normalizeTitle = (title: string | null): string => {
+  return (title || '')
+    .replace(/ /g, '-')
+    .replace(/[^a-zA-Z0-9가-힣-]/g, '')
+    .replace(/--/g, '-')
+    .replace(/-$/, '')
+    .replace(/^-/, '')
+    .trim()
+    .toLowerCase()
 }
