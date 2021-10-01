@@ -1,25 +1,25 @@
-import { ExtendedRecordMap } from 'notion-types'
-import { parsePageId, uuidToId, getBlockTitle } from 'notion-utils'
+import { ExtendedRecordMap } from 'notion-types';
+import { parsePageId, uuidToId, getBlockTitle } from 'notion-utils';
 
-import { inversePageUrlOverrides } from './config'
+import { inversePageUrlOverrides } from './config';
 
 export function getCanonicalPageId(
   pageId: string,
   recordMap: ExtendedRecordMap,
   { uuid = true }: { uuid?: boolean } = {}
 ): string | null {
-  const cleanPageId = parsePageId(pageId, { uuid: false })
+  const cleanPageId = parsePageId(pageId, { uuid: false });
   if (!cleanPageId) {
-    return null
+    return null;
   }
 
-  const override = inversePageUrlOverrides[cleanPageId]
+  const override = inversePageUrlOverrides[cleanPageId];
   if (override) {
-    return override
+    return override;
   } else {
     return getCanonicalPageIdImpl(pageId, recordMap, {
       uuid
-    })
+    });
   }
 }
 
@@ -32,25 +32,25 @@ export const getCanonicalPageIdImpl = (
   recordMap: ExtendedRecordMap,
   { uuid = true }: { uuid?: boolean } = {}
 ): string | null => {
-  if (!pageId || !recordMap) return null
+  if (!pageId || !recordMap) return null;
 
-  const id = uuidToId(pageId)
-  const block = recordMap.block[pageId]?.value
+  const id = uuidToId(pageId);
+  const block = recordMap.block[pageId]?.value;
 
   if (block) {
-    const title = normalizeTitle(getBlockTitle(block, recordMap))
+    const title = normalizeTitle(getBlockTitle(block, recordMap));
 
     if (title) {
       if (uuid) {
-        return `${title}-${id}`
+        return `${title}-${id}`;
       } else {
-        return title
+        return title;
       }
     }
   }
 
-  return id
-}
+  return id;
+};
 
 export const normalizeTitle = (title: string | null): string => {
   return (title || '')
@@ -59,5 +59,5 @@ export const normalizeTitle = (title: string | null): string => {
     .replace(/-$/, '')
     .replace(/^-/, '')
     .trim()
-    .toLowerCase()
-}
+    .toLowerCase();
+};

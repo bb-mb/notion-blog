@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import * as React from 'react'
-import * as types from 'lib/types'
-import { PageHead } from './PageHead'
+import Head from 'next/head';
+import * as React from 'react';
+import * as types from 'lib/types';
+import { PageHead } from './PageHead';
 
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 
 export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
-  const title = site?.name || 'Notion Page Not Found'
+  const title = site?.name || 'Notion Page Not Found';
 
   return (
     <>
@@ -41,5 +41,5 @@ export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
         </main>
       </div>
     </>
-  )
-}
+  );
+};

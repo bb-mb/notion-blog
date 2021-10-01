@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import * as React from 'react'
-import * as types from 'lib/types'
+import Head from 'next/head';
+import * as React from 'react';
+import * as types from 'lib/types';
 
 // TODO: remove duplication between PageHead and NotionPage Head
 
@@ -24,5 +24,5 @@ export const PageHead: React.FC<types.PageProps> = ({ site }) => {
       <meta name='theme-color' content='#EB625A' />
       <meta property='og:type' content='website' />
     </Head>
-  )
-}
+  );
+};

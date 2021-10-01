@@ -1,15 +1,15 @@
-import React from 'react'
-import cs from 'classnames'
+import React from 'react';
+import cs from 'classnames';
 
-import * as config from 'lib/config'
+import * as config from 'lib/config';
 
-import styles from './PageSocial.module.css'
+import styles from './PageSocial.module.css';
 
 interface SocialLink {
-  name: string
-  title: string
-  icon: React.ReactNode
-  href?: string
+  name: string;
+  title: string;
+  icon: React.ReactNode;
+  href?: string;
 }
 
 const socialLinks: SocialLink[] = [
@@ -45,7 +45,7 @@ const socialLinks: SocialLink[] = [
       </svg>
     )
   }
-].filter(Boolean)
+].filter(Boolean);
 
 export const PageSocial: React.FC = () => {
   return (
@@ -67,5 +67,5 @@ export const PageSocial: React.FC = () => {
         </a>
       ))}
     </div>
-  )
-}
+  );
+};

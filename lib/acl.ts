@@ -1,4 +1,4 @@
-import { PageProps } from './types'
+import { PageProps } from './types';
 
 export async function pageAcl({
   site,
@@ -11,7 +11,7 @@ export async function pageAcl({
         statusCode: 404,
         message: 'Unable to resolve notion site'
       }
-    }
+    };
   }
 
   if (!recordMap) {
@@ -20,11 +20,11 @@ export async function pageAcl({
         statusCode: 404,
         message: `Unable to resolve page for domain "${site.domain}". Notion page "${pageId}" not found.`
       }
-    }
+    };
   }
 
-  const keys = Object.keys(recordMap.block)
-  const rootKey = keys[0]
+  const keys = Object.keys(recordMap.block);
+  const rootKey = keys[0];
 
   if (!rootKey) {
     return {
@@ -32,11 +32,11 @@ export async function pageAcl({
         statusCode: 404,
         message: `Unable to resolve page for domain "${site.domain}". Notion page "${pageId}" invalid data.`
       }
-    }
+    };
   }
 
-  const rootValue = recordMap.block[rootKey]?.value
-  const rootSpaceId = rootValue?.space_id
+  const rootValue = recordMap.block[rootKey]?.value;
+  const rootSpaceId = rootValue?.space_id;
 
   if (
     rootSpaceId &&
@@ -49,7 +49,7 @@ export async function pageAcl({
           statusCode: 404,
           message: `Notion page "${pageId}" doesn't belong to the Notion workspace owned by "${site.domain}".`
         }
-      }
+      };
     }
   }
 }
