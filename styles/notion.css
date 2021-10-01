@@ -12,6 +12,10 @@
   --notion-header-height: 54px;
 }
 
+.notion-page-scroller {
+  padding: 0 2vw;
+}
+
 .notion-page-has-cover {
   padding-top: 85px;
 }
@@ -123,20 +127,6 @@
 
 .notion-hr {
   margin: 2em 0;
-}
-
-@media only screen and (max-width: 920px) {
-  .index-page.notion-page {
-    padding-left: 4vw;
-    padding-right: 4vw;
-  }
-}
-
-@media only screen and (max-width: 720px) {
-  .notion-page {
-    padding-left: 4vw;
-    padding-right: 4vw;
-  }
 }
 
 @media only screen and (max-width: 600px) {
