@@ -7,6 +7,10 @@
  * places to add some flare.
  */
 
+.notion-aside-table-of-contents-header {
+  display: none;
+}
+
 .notion {
   --notion-max-width: 720px;
   --notion-header-height: 54px;
