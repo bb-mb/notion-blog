@@ -16,6 +16,9 @@ module.exports = {
   socialImageTitle: 'soso01 블로그',
   socialImageSubtitle: 'soso01 블로그',
 
+  // fontFamily: ['Noto Sans KR', 'Nanum Gothic'],
+  fontFamily: [],
+
   // social usernames (optional)
   // twitter: 'transitive_bs',
   // github: 'transitive-bullshit',
