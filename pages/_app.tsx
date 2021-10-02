@@ -5,7 +5,7 @@ import 'styles/global.css';
 import 'react-notion-x/src/styles.css';
 
 // used for code syntax highlighting (optional)
-import 'prismjs/themes/prism-coy.css';
+// import 'prismjs/themes/prism-coy.css';
 
 // this might be better for dark mode
 // import 'prismjs/themes/prism-okaidia.css'
@@ -25,6 +25,7 @@ import 'styles/notion.css';
 
 // global style overrides for prism theme (optional)
 import 'styles/prism-theme.css';
+import 'styles/code-theme.css';
 
 // here we're bringing in any languages we want to support for
 // syntax highlighting via Notion's Code block
