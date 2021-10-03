@@ -37,7 +37,8 @@
 }
 
 .index-page {
-  --notion-max-width: 900px;
+  /* --notion-max-width: 900px; */
+  --notion-max-width: 600px;
 }
 
 .notion-text {
