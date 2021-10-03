@@ -6,7 +6,14 @@
  * whereas our goal with this site is to adjust Notion's styling in a few key
  * places to add some flare.
  */
-
+.notion-header .nav-header {
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.notion-header .nav-header::-webkit-scrollbar {
+  display: none;
+}
 .notion-aside-table-of-contents-header {
   display: none;
 }
