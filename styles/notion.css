@@ -177,10 +177,9 @@
 }
 
 @media only screen and (max-width: 420px) {
-  .notion-page-cover {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
+  .notion-property-select,
+  .notion-property-multi_select {
+    display: none;
   }
 }
 
