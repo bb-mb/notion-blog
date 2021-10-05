@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import * as React from 'react';
 import * as types from 'lib/types';
+import useDarkMode from 'use-dark-mode';
 
 // TODO: remove duplication between PageHead and NotionPage Head
 
 export const PageHead: React.FC<types.PageProps> = ({ site }) => {
+  const darkMode = useDarkMode(false, { classNameDark: 'dark-mode' });
+
   return (
     <Head>
       <meta charSet='utf-8' />
@@ -21,7 +24,7 @@ export const PageHead: React.FC<types.PageProps> = ({ site }) => {
         </>
       )}
 
-      <meta name='theme-color' content='#EB625A' />
+      {/* <meta name='theme-color' content={darkMode.value ? '' : ''} /> */}
       <meta property='og:type' content='website' />
     </Head>
   );
