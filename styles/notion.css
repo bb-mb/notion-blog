@@ -7,6 +7,10 @@
  * places to add some flare.
  */
 
+.notion-list {
+  width: 100%;
+}
+
 .notion-toggle {
   width: 100%;
 }
