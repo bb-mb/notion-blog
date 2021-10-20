@@ -37,8 +37,6 @@ export const getCanonicalPageIdImpl = (
   const id = uuidToId(pageId);
   const block = recordMap.block[pageId]?.value;
 
-  console.log(id, block);
-
   if (block) {
     const title = normalizeTitle(getBlockTitle(block, recordMap));
 
