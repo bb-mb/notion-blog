@@ -57,6 +57,7 @@ export const getCanonicalPageIdImpl = (
 export const normalizeTitle = (title: string | null): string => {
   return (title || '')
     .replace(/ /g, '-')
+    .replace(/[^A-Za-z0-9가-힣-]/g, '')
     .replace(/--/g, '-')
     .replace(/-$/, '')
     .replace(/^-/, '')
