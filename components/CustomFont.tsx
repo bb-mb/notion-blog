@@ -21,7 +21,7 @@ export const CustomFont: React.FC<{ site: types.Site }> = ({ site }) => {
   return (
     <>
       <Head>
-        <link rel='stylesheet' href={googleFontsLink} />
+        {googleFontsLink && <link rel='stylesheet' href={googleFontsLink} />}
 
         <style>{`
           .notion.notion-app {
