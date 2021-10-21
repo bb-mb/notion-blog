@@ -13,7 +13,9 @@ export const CustomFont: React.FC<{ site: types.Site }> = ({ site }) => {
     .map((font) => font.replace(/ /g, '+'))
     .map((font) => `family=${font}:ital,wght@0,200..700;1,200..700`)
     .join('&');
-  const googleFontsLink = `https://fonts.googleapis.com/css?${googleFontFamilies}&display=swap`;
+  const googleFontsLink =
+    googleFontFamilies &&
+    `https://fonts.googleapis.com/css?${googleFontFamilies}&display=swap`;
   const cssFontFamilies = fontFamilies.map((font) => `"${font}"`).join(', ');
 
   return (
