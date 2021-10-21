@@ -37,17 +37,17 @@ export const getCanonicalPageIdImpl = (
   const id = uuidToId(pageId);
   const block = recordMap.block[pageId]?.value;
 
-  if (block) {
-    const title = normalizeTitle(getBlockTitle(block, recordMap));
+  // if (block) {
+  //   const title = normalizeTitle(getBlockTitle(block, recordMap));
 
-    if (title) {
-      if (uuid) {
-        return `${title}-${id}`;
-      } else {
-        return title;
-      }
-    }
-  }
+  //   if (title) {
+  //     if (uuid) {
+  //       return `${title}-${id}`;
+  //     } else {
+  //       return title;
+  //     }
+  //   }
+  // }
 
   return id;
 };
