@@ -45,6 +45,7 @@ const createSitemap = (
           `
             <url>
               <loc>${host}/${canonicalPagePath}</loc>
+              <changefreq>daily</changefreq>
             </url>
           `.trim()
         )

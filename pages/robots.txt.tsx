@@ -16,8 +16,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
     'public, s-maxage=60, max-age=60, stale-while-revalidate=60'
   );
   res.setHeader('Content-Type', 'text/plain');
-  res.write(`User-agent: *
-  Sitemap: ${host}/sitemap.xml
+  res.write(`User-agent: * \nAllow: /\nSitemap: ${host}/sitemap.xml
   `);
   res.end();
   return {
