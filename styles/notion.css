@@ -11,6 +11,11 @@
   width: 100%;
 }
 
+.notion-list li {
+  padding: 2px 0;
+  white-space: pre-wrap;
+}
+
 .notion-toggle {
   width: 100%;
 }
@@ -149,7 +154,7 @@
 }
 
 .notion-hr {
-  margin: 2em 0;
+  /* margin: 1em 0; */
 }
 
 @media only screen and (max-width: 600px) {
