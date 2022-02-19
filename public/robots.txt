@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: soso01.com
+
+# Sitemaps
+Sitemap: soso01.com/sitemap.xml
