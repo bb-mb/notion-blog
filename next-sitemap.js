@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://soso01.com',
+  siteUrl: 'https://blog.soso01.com',
   generateRobotsTxt: true // (optional)
   // ...other options
 };
